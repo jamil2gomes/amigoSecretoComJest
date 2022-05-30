@@ -36,3 +36,35 @@ test('adicionar participante caso input esteja preenchido',()=>{
     expect(input).toHaveFocus();
     expect(input).toHaveValue("");
 });
+
+test('nomes duplicados não podem ser adicionados na lista',()=>{
+    render( 
+    <RecoilRoot>
+        <Formulario/>
+    </RecoilRoot>);
+
+    const input = screen.getByPlaceholderText('Insira os nomes dos participantes');
+    const button = screen.getByRole('button');
+
+    fireEvent.change(input,{
+        target:{
+            value:'Jamil'
+        }
+    });
+
+    fireEvent.click(button);
+
+    fireEvent.change(input,{
+        target:{
+            value:'Jamil'
+        }
+    });
+
+    fireEvent.click(button);
+
+    const mensagemErro = screen.getByRole("alert");
+
+    expect(mensagemErro).toBeInTheDocument();
+    expect(mensagemErro.textContent).toBe("Nomes duplicados não permitidos!");
+    
+});
