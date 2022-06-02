@@ -2,26 +2,37 @@
 
 exports[`a pagina de configuracao deve ser redenrizada corretamente 1`] = `
 <div>
-  <form>
-    <input
-      placeholder="Insira os nomes dos participantes"
-      type="text"
-      value=""
-    />
-    <button
-      disabled=""
-    >
-      Adicionar
-    </button>
-  </form>
+  <div
+    class="grupo-input-btn"
+  >
+    <form>
+      <input
+        placeholder="Insira os nomes dos participantes"
+        type="text"
+        value=""
+      />
+      <button
+        disabled=""
+      >
+        Adicionar
+      </button>
+    </form>
+  </div>
   
   <ul />
-  <footer>
+  <footer
+    class="rodape-configuracoes"
+  >
     <button
+      class="botao"
       disabled=""
     >
       Iniciar brincadeira
     </button>
+    <img
+      alt="Sacolas de compras"
+      src="/imagens/sacolas.png"
+    />
   </footer>
 </div>
 `;

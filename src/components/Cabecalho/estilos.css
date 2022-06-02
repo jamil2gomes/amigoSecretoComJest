@@ -14,7 +14,6 @@
     z-index: 1;
 }
 
-
 @media screen and (max-width: 800px) {
     .cabecalho {
         padding-top: 60px;
@@ -28,4 +27,3 @@
         height: 199px;
     }
 }
-
